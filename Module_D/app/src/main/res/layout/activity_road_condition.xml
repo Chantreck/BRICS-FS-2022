@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".RoadConditionActivity">
+
+    <View
+        android:id="@+id/bluebg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#3F51B5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/bluebg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:text="Road condition inquiry"
+        />
+
+    <ImageView
+        android:id="@+id/menuBtn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="18dp"
+        android:src="@android:drawable/ic_dialog_dialer"
+        app:layout_constraintBottom_toBottomOf="@id/bluebg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bluebg" />
+
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="875dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bluebg" />
+
+    <View
+        android:id="@+id/str11"
+        android:layout_width="55dp"
+        android:layout_height="642dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="172dp"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/str12"
+        android:layout_width="58dp"
+        android:layout_height="644dp"
+        android:layout_marginStart="408dp"
+        android:layout_marginTop="172dp"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/express1"
+        android:layout_width="819dp"
+        android:layout_height="66dp"
+        android:background="#FF0000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="107dp" />
+
+    <View
+        android:id="@+id/express2"
+        android:layout_width="812dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="748dp"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/express3"
+        android:layout_width="49dp"
+        android:layout_height="705dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="107dp"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/express4"
+        android:layout_width="58dp"
+        android:layout_height="705dp"
+        android:layout_marginStart="788dp"
+        android:layout_marginTop="104dp"
+        android:background="#FF0000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="2021/08/23"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Monday"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_constraintStart_toEndOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="124dp"
+        android:text="Temperature: 17*C"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/day"
+        app:layout_constraintStart_toEndOf="@id/background"
+        android:layout_marginStart="32dp"/>
+
+    <TextView
+        android:id="@+id/humidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity: 58%"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/temp"
+        app:layout_constraintStart_toStartOf="@id/temp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PM2.5: 29ug/m3"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintTop_toBottomOf="@id/humidity"
+        app:layout_constraintStart_toStartOf="@id/temp"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/roadconges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Road congestion level diagram"
+        app:layout_constraintStart_toStartOf="@id/pm"
+        app:layout_constraintTop_toBottomOf="@id/pm"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"/>
+
+    <View
+        android:id="@+id/greenbg"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="#6ab82e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/roadconges"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="32dp"/>
+
+    <View
+        android:id="@+id/yellowbg"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="#ece93a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/greenbg"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:id="@+id/orangebg"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="#f49b25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/yellowbg"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:id="@+id/redbg"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="#e33532"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/orangebg"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"/>
+
+    <View
+        android:id="@+id/darkredbg"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:background="#b01e23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/redbg"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/greenbg"
+        app:layout_constraintTop_toTopOf="@id/greenbg"
+        app:layout_constraintBottom_toBottomOf="@id/greenbg"
+        android:textSize="20sp"
+        android:text="Unobstructed"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/yellowbg"
+        app:layout_constraintTop_toTopOf="@id/yellowbg"
+        app:layout_constraintBottom_toBottomOf="@id/yellowbg"
+        android:textSize="20sp"
+        android:text="Slow"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/orangebg"
+        app:layout_constraintTop_toTopOf="@id/orangebg"
+        app:layout_constraintBottom_toBottomOf="@id/orangebg"
+        android:textSize="20sp"
+        android:text="General Congestion"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/redbg"
+        app:layout_constraintTop_toTopOf="@id/redbg"
+        app:layout_constraintBottom_toBottomOf="@id/redbg"
+        android:textSize="20sp"
+        android:text="Moderate Congestion"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/darkredbg"
+        app:layout_constraintTop_toTopOf="@id/darkredbg"
+        app:layout_constraintBottom_toBottomOf="@id/darkredbg"
+        android:textSize="20sp"
+        android:text="Severe Congestion"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/update"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:tint="#3F51B5"
+        android:src="@android:drawable/stat_notify_sync"
+        app:layout_constraintTop_toBottomOf="@id/bluebg"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="40dp"/>
+
+    <LinearLayout
+        android:id="@+id/drawer"
+        android:layout_width="400dp"
+        android:orientation="vertical"
+        android:background="#CFCFCF"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#3F51B5">
+
+            <ImageView
+                android:id="@+id/image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/icon_test"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="System"
+                app:layout_constraintTop_toBottomOf="@id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="@color/white"
+                android:textSize="36sp"
+                android:layout_marginTop="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/violation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:background="@drawable/menu_item"
+            android:text="Violation Inquiry"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/road"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Road condition Inquiry"
+            android:fontFamily="sans-serif-black"
+            android:background="@drawable/menu_item"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/analysis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Analysis"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:background="@drawable/menu_item"
+            android:textSize="36sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/traffic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Traffic Light Search"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:background="@drawable/menu_item"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="16dp"
+            android:text="Logout"
+            android:fontFamily="sans-serif-black"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:background="@drawable/menu_item"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/chel"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/jiaojing1_1"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
